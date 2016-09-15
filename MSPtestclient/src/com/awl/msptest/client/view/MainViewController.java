@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
@@ -20,15 +21,15 @@ import javafx.scene.control.TextArea;
  */
 public class MainViewController implements Initializable {
     
-    @FXML
-    private Button sendRequestButton;
+    @FXML private Button sendRequest;
+    @FXML private TextArea logField;
+    @FXML private ChoiceBox environment;
+    @FXML private ChoiceBox typeOfRequest;
+    @FXML private Button exitButton;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        for(int i=0;i<100;i++)
-        {
-            sb.append("Printing some random text " + i);
-        }
+        
     }
     
     
@@ -37,16 +38,13 @@ public class MainViewController implements Initializable {
         
     }
     
-    @FXML
-    private TextArea logField;
     
-    private StringBuffer sb = new StringBuffer();
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        
-//        logField.setText(sb.toString());
     }    
     
 }
